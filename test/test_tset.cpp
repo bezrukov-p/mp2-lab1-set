@@ -2,7 +2,7 @@
 
 #include <gtest.h>
 
-TEST(TSet, can_get_max_power_set)
+TEST(TSet, can_get_max_power_set) //
 {
   const int size = 5;
   TSet set(size);
@@ -10,7 +10,7 @@ TEST(TSet, can_get_max_power_set)
   EXPECT_EQ(size, set.GetMaxPower());
 }
 
-TEST(TSet, can_insert_non_existing_element)
+TEST(TSet, can_insert_non_existing_element) //
 {
   const int size = 5, k = 3;
   TSet set(size);
@@ -19,7 +19,7 @@ TEST(TSet, can_insert_non_existing_element)
   EXPECT_NE(set.IsMember(k), 0);
 }
 
-TEST(TSet, can_insert_existing_element)
+TEST(TSet, can_insert_existing_element) //
 {
   const int size = 5;
   const int k = 3;
@@ -30,7 +30,7 @@ TEST(TSet, can_insert_existing_element)
   EXPECT_NE(set.IsMember(k), 0);
 }
 
-TEST(TSet, can_delete_non_existing_element)
+TEST(TSet, can_delete_non_existing_element)//
 {
   const int size = 5, k = 3;
   TSet set(size);
@@ -39,7 +39,7 @@ TEST(TSet, can_delete_non_existing_element)
   EXPECT_EQ(set.IsMember(k), 0);
 }
 
-TEST(TSet, can_delete_existing_element)
+TEST(TSet, can_delete_existing_element)//
 {
   const int size = 5, k = 3;
   TSet set(size);
@@ -51,7 +51,7 @@ TEST(TSet, can_delete_existing_element)
   EXPECT_EQ(set.IsMember(k), 0);
 }
 
-TEST(TSet, compare_two_sets_of_non_equal_sizes)
+TEST(TSet, compare_two_sets_of_non_equal_sizes)//
 {
   const int size1 = 4, size2 = 6;
   TSet set1(size1), set2(size2);
@@ -59,7 +59,7 @@ TEST(TSet, compare_two_sets_of_non_equal_sizes)
   EXPECT_EQ(1, set1 != set2);
 }
 
-TEST(TSet, compare_two_equal_sets)
+TEST(TSet, compare_two_equal_sets)//
 {
   const int size = 4;
   TSet set1(size), set2(size);
@@ -72,7 +72,7 @@ TEST(TSet, compare_two_equal_sets)
   EXPECT_EQ(set1, set2);
 }
 
-TEST(TSet, compare_two_non_equal_sets)
+TEST(TSet, compare_two_non_equal_sets)//
 {
   const int size = 4;
   TSet set1(size), set2(size);
@@ -86,7 +86,7 @@ TEST(TSet, compare_two_non_equal_sets)
   EXPECT_EQ(1, set1 != set2);
 }
 
-TEST(TSet, can_assign_set_of_equal_size)
+TEST(TSet, can_assign_set_of_equal_size) //
 {
   const int size = 4;
   TSet set1(size), set2(size);
@@ -98,7 +98,7 @@ TEST(TSet, can_assign_set_of_equal_size)
   EXPECT_EQ(set1, set2);
 }
 
-TEST(TSet, can_assign_set_of_greater_size)
+TEST(TSet, can_assign_set_of_greater_size)//
 {
   const int size1 = 4, size2 = 6;
   TSet set1(size1), set2(size2);
