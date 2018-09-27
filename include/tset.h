@@ -37,6 +37,9 @@ public:
   TSet operator* (const TSet &s);  // пересечение
   TSet operator~ (void);           // дополнение
 
+  TBitField GetBitField();
+  int min(int left, int right);
+  int max(int left, int right);
   friend istream &operator>>(istream &istr, TSet &bf);
   friend ostream &operator<<(ostream &ostr, const TSet &bf);
 };
